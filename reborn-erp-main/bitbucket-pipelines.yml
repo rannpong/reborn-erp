@@ -1,0 +1,59 @@
+#  Template Java Gradle build
+
+#  This template allows you to test and build your Java project with Gradle.
+#  The workflow allows running tests, code checkstyle and security scans on the default branch.
+
+# Prerequisites: appropriate project structure should exist in the repository.
+
+image: node:16
+
+clone:
+  depth: full              # SonarCloud scanner needs the full history to assign issues properly
+
+definitions:
+  #caches:
+  #  sonar: ~/.sonar/cache  # Caching SonarCloud artifacts will speed up your build
+  steps:
+    - step: &build-test
+        name: Build and Test
+        caches:
+          - node
+        script:
+          - npm install
+          - npm run build
+          - tar cvzf front.tar.gz -C ./dist --exclude=front.tar.gz --exclude=node_modules --exclude=.git --exclude=bitbucket-pipelines.yml --exclude=package-lock.json --exclude=yarn.lock --exclude=yarn-error.log ./ || echo 'ooo'
+          - ls -la
+        artifacts:
+          - front.tar.gz
+    - step: &deploy-to-dev-frontend
+        name: Deploy to dev frontend
+        deployment: Test
+        script:
+          - echo "Deploying to dev backend environment"
+          - ssh -L 10222:10.200.0.2:22 -fN bitbucket@132.226.236.201
+          - cat ~/.ssh/known_hosts
+          - ssh-keyscan -t rsa -p 10222 localhost >> ~/.ssh/known_hosts
+          #- echo "[localhost]:10222 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIUVfltimuQbrA78MOLnNqYWfga1ZAjGR+MOqV09UQhlyRRE+9uYDkGLzOIJDsnRkAfvV51QBIzCW6mewLZ10ijStfXi7ZqIywYF3SHLf3e+65Jf1CUtJ42CUF2Sm2Kf1dXJuq6EfdJEimuXxGqliMzE4yurnCQn5s1057nQG+eBwohwNVUQcDMldPYYVM9vaDCsP+Mb+gtW/iDAm3hG6OvnGRTnVfJDKCm8fu6QfEe1hnBNLY31re1QzTawgN0m788FFJpNUR6ACeroJIKe4c4kd5ry5/XwdQp0HfxX2Q2OrHdoNmcBjpuWKPiMabDYLGu3/wXZlOD0ip5QLNh7Ln" >> ~/.ssh/known_hosts
+          #- cat ~/.ssh/known_hosts
+          - pwd
+          - ls -la
+          - scp -P 10222 /opt/atlassian/pipelines/agent/build/front.tar.gz reborn@localhost:/app/reborn/mini-partner/www
+          - ssh -p 10222 reborn@localhost "cd /app/reborn/mini-partner/www; tar xvzf /app/reborn/mini-partner/www/front.tar.gz"
+          - ssh -p 10222 reborn@localhost "rm /app/reborn/mini-partner/www/front.tar.gz"
+
+# More info here: https://confluence.atlassian.com/bitbucket/configure-bitbucket-pipelines-yml-792298910.html
+
+pipelines:
+  branches:
+    main:
+      - step: *build-test
+      - step: *deploy-to-dev-frontend
+    develop:
+      - step: *build-test
+      - step: *deploy-to-dev-frontend
+          
+  pull-requests:
+    '**':
+      - step:
+          script:
+            - if [ "${BITBUCKET_PR_DESTINATION_BRANCH}" != "main" ]; then printf 'not a target branch we want to check'; else npm install; npm run build; fi

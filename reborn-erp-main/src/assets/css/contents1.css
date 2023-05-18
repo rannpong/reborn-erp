@@ -1,0 +1,1201 @@
+@charset "UTF-8";
+
+/* subBody */
+.subBody > h2 {
+  font-size: 22px;
+  color: #101010;
+  font-weight: bold;
+  letter-spacing: -0.44px;
+  padding-bottom: 24px;
+}
+
+.flexNo{
+  display:block;
+}
+.flexNo .frm + .frm{
+  margin-top:12px;
+}
+
+.flex-wrap {
+  display: flex;
+  align-items: center;
+}
+.flex-wrap .select + .select {
+  margin-left: 6px;
+}
+.flex-wrap .frm-wrap{
+  flex-wrap:wrap;
+  margin-left:20px;
+}
+.flex-wrap .frm-wrap:first-child{
+  margin-left:0px;
+}
+.flex-wrap .select + .btn-wrap {
+  margin-left: 6px;
+}
+.flex-wrap .select + .input-wrap {
+  margin-left: 6px;
+}
+.flex-wrap .btn-wrap .btn + .btn{
+  margin-left:6px;
+}
+
+.flex-wrap input + input{
+  margin-left:6px;
+}
+.flex-wrap input + div{
+  margin-left:6px;
+}
+
+.flex-wrap .select + .date-input-wrap{
+  margin:0 20px 0 6px;
+}
+.flex-wrap .date_txt_gruop + .btn-wrap{
+  margin-left:6px;
+}
+
+.tbl-tit-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.total-wrap > span {
+  display: inline-block;
+  font-size: 13px;
+  color: #444;
+  letter-spacing: -0.39px;
+}
+.total-wrap > span > em.total {
+  color: #1ea8e7;
+  font-style: normal;
+}
+.tbl-tit-wrap .flex-wrap{
+  margin-left:auto;
+}
+
+.data-wrap .table-wrap {
+  width: 100%;
+  position: relative;
+}
+.data-wrap .skyblue {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.data-wrap .tbl-bot-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+.data-wrap .tbl-bot-wrap .paging {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 0;
+}
+
+.data-table-wrap {
+  border: 1px solid #d4dce4;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px 0 rgba(67, 87, 103, 0.05);
+}
+
+.tblScroll {
+  overflow: auto;
+  max-height: 438px;
+  box-sizing: border-box;
+}
+.tbl_x_scr {
+  margin-bottom: 6px;
+}
+.tblScroll table {
+  border-collapse: separate;
+}
+.tblScroll thead {
+  position: -webkit-sticky;
+  position: sticky;
+  height: 46px;
+  top: 0px;
+  z-index: 1;
+}
+.tblScroll tfoot {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 46px;
+  z-index: 1;
+}
+
+.tblScroll table + table {
+  margin-top: 30px;
+}
+
+.tblScroll::-webkit-scrollbar {
+  width: 8px;
+}
+.tblScroll.verX::-webkit-scrollbar {
+  height: 8px;
+}
+.tblScroll::-webkit-scrollbar-thumb {
+  background: #efefef;
+  border-radius: 10px;
+}
+
+/* table data */
+.data-table-ty01 {
+}
+.data-table-ty01 thead tr th {
+  position: relative;
+  background-color: #fafbfd;
+  border-bottom: 1px solid #7b8b97;
+  font-size: 14px;
+  color: #444;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  padding: 14px 10px;
+  box-sizing:border-box;
+}
+.data-table-ty01 tbody tr td {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 14px;
+  color: #444;
+  padding: 14px 10px;
+  text-align: center;
+  box-sizing:border-box;
+}
+.data-table-ty01 tbody tr:last-child td {
+  border-bottom: none;
+}
+.data-table-ty01 tbody tr td.return {
+  color: #ec4455;
+}
+.data-table-ty01 tbody tr td.approval {
+  color: #1ea8e7;
+}
+.data-table-ty01 tbody tr .none-data {
+  padding: 70px 0;
+}
+/* table tr 취소건 td 전체 */
+table tbody tr.cancel_line > td {
+  color: #ec4455;
+}
+/* table 에이전트 예약번호 없을 경우*/
+table tbody tr.ottNumNo_line > td{
+  background-color: #fefbee;
+}
+/* table footer bg */
+table tfoot tr.accountTotal_line > td{
+  background-color: #fefbee;
+}
+/* 현재일 기준 예약 시작 */
+table tbody tr.rsvStart_line > td {
+  color: #36aa9a;
+}
+/* table td 취소  */
+table tbody tr td.cancel,
+table tbody tr td.noQuant,
+table tbody tr td.notUse {
+  color: #ec4455;
+}
+table tbody tr td.correct {
+  color: #1ea8e7;
+}
+
+.data-table-ty01 tbody :hover {
+  background-color: rgba(30, 168, 231, 0.1);
+  cursor: pointer;
+}
+.data-table-ty01 tfoot {
+  display: table-header-group;
+}
+.data-table-ty01 tfoot tr td {
+  background-color: #ecf7ff;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  color: #1ea8e7;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* table view type */
+.data-table-ty02 {
+  border-bottom: 1px solid #ccc;
+}
+.data-table-ty02 thead tr th {
+  background-color: #fafbfd;
+  border-top: 1px solid #7b8b97;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  color: #101010;
+  letter-spacing: -0.28px;
+  padding: 14px 10px;
+}
+/* .data-table-ty02 tbody tr:first-child td{
+  border-top:none;
+} */
+.data-table-ty02 tbody tr td {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 14px;
+  color: #444;
+  letter-spacing: -0.28px;
+  padding: 12px 14px;
+  text-align: center;
+}
+.data-table-ty02 tfoot {
+  display: table-header-group;
+}
+.data-table-ty02 tfoot tr td {
+  background-color: #ecf7ff;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  color: #1ea8e7;
+  letter-spacing: -0.28px;
+  padding: 12px 0;
+  text-align:center;
+}
+
+.data-table-ty02 thead tr th + th,
+.data-table-ty02 tbody tr td + td,
+.data-table-ty02 tfoot tr td + td {
+  border-left: 1px solid #eaeaea;
+}
+
+.popup .data-table-ty02.ty_02 tbody tr td {
+  padding: 10px 14px;
+}
+.popup .data-table-ty02.ty_02 tbody tr td .btn-wrap .tbtn {
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  letter-spacing: -0.26px;
+}
+
+/* table list type */
+.table-list-wrap {
+  background-color: #fff;
+  border: 1px solid #d4dce4;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px 0 rgba(67, 87, 103, 0.05);
+}
+/* table list type1 radius 있는 리스트 */
+.data-table-ty03 {
+}
+.data-table-ty03 tbody tr th {
+  background-color: #fafbfd;
+  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 14px;
+  color: #101010;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  padding: 0px 20px;
+  text-align: left;
+  box-sizing: border-box;
+}
+.data-table-ty03 tbody tr td {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 14px;
+  color: #101010;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+.data-table-ty03 tbody tr:first-child th:first-child {
+  border-top-left-radius: 6px;
+}
+.data-table-ty03 tbody tr:first-child td:last-child {
+  border-top-right-radius: 6px;
+}
+.data-table-ty03 tbody tr:last-child th:first-child {
+  border-bottom-left-radius: 6px;
+}
+.data-table-ty03 tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
+}
+.data-table-ty03 tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* table list type2 */
+.data-table-ty04 {
+  border-top: 1px solid #7b8b97;
+  border-bottom: 1px solid #ccc;
+}
+.data-table-ty04 tbody tr th {
+  background-color: #fafbfd;
+  border-bottom: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  font-size: 14px;
+  color: #101010;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  padding: 0px 12px;
+  text-align: left;
+  box-sizing: border-box;
+}
+.data-table-ty04 tbody tr td {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 14px;
+  color: #444;
+  letter-spacing: -0.28px;
+  padding: 8px 10px;
+  text-align: left;
+  box-sizing: border-box;
+}
+.data-table-ty04.ty_admin th {
+  background-color: #fefbee;
+}
+
+.data-table-ty04 + .data-table-ty04 {
+  margin-top: 20px;
+}
+
+.btn-desc {
+  width: 18px;
+  height: 18px;
+  background: url('../img/common/ico_desc_gray.png') 0 0 no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 4px;
+}
+.btn-desc.up {
+  background: url('../img/common/ico_desc_up_blue.png') 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+
+.select.sortingSelect {
+  width: 80px;
+}
+
+.info-tit-box {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 13px;
+}
+.info-tit-box .infoTit {
+  position: relative;
+  font-size: 18px;
+  color: #101010;
+  font-weight: bold;
+  letter-spacing: -0.36px;
+  padding-left: 22px;
+}
+.info-tit-box .infoTit::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border: 4px solid #1ea8e7;
+  border-radius: 5px;
+  margin-right: 6px;
+  box-sizing: border-box;
+}
+.info-tit-area {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex: 1;
+}
+.info-tit-box .info-tit-area .frm-wrap.chk_del{
+  margin-left:20px;
+}
+.info-cont-box .tbl_list_input {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+.info-cont-box .tbl_list_input > input {
+  width: 240px;
+}
+.info-cont-box .tbl_desc {
+  font-size: 13px;
+  color: #777;
+  letter-spacing: -0.26px;
+  margin-left: 10px;
+}
+.info-cont-box .tbl_desc.disabled {
+  color: #ec4455;
+}
+
+.guide_desc {
+  display: block;
+  font-size: 13px;
+  color: #7b8b97;
+  letter-spacing: -0.26px;
+  margin-top: 16px;
+  text-align: left;
+}
+.guide_desc.ty_02{
+  margin:0;
+}
+.guide_desc::before {
+  content: '※';
+  display: inline-block;
+  margin-right: 5px;
+}
+.guide_desc.err {
+  color: #ec4455;
+}
+
+.info-box-wrap + .info-box-wrap {
+  margin-top: 25px;
+}
+
+.select.select_delete {
+  width: 300px;
+  margin: 20px auto 0;
+}
+
+/* drag list */
+.drag_list_wrap > h3 {
+  background-color: #f8fafc;
+  font-size: 16px;
+  color: #101010;
+  letter-spacing: -0.32px;
+  font-weight: 600;
+  padding: 9px 0;
+  margin-bottom: 10px;
+}
+.drag_list > li {
+  position: relative;
+  display: flex;
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+  transition: all 0.4s;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.drag_list > li:hover {
+  border: 1px solid #435767;
+}
+.drag_list > li > span {
+  display: inline-block;
+  background-color: #fff;
+  font-size: 14px;
+  color: #444;
+  letter-spacing: -0.28px;
+  padding: 12px 0;
+}
+.drag_list > li > .label {
+  width: 70%;
+  padding-left: 46px;
+  text-align: left;
+}
+.drag_list > li > .label::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('../img/common/ico_drag.png') no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+.drag_list > li > .count {
+  width: 30%;
+}
+
+.drag_list > li + li {
+  margin-top: 10px;
+}
+
+.tblScroll .drag_tit {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.dragTbl table tbody tr td {
+  padding: 12px 0;
+}
+
+/* 기초자료 - 차량관리 */
+.basicdata01 .searchBox .select{
+  width:200px;
+}
+
+/* 예약 - 예약접수 */
+.reservation01 .searchBox .date-input-wrap .datePicker {
+  width: 150px;
+}
+.reservation01 .searchBox .searchInput {
+  width: 538px;
+}
+
+/* 예약 - 예약접수 상세 */
+.subBody > h2 + .btn-wrap.align_right{
+  margin-top:0;
+}
+.rsvDetail01 input {
+  width: 240px;
+}
+.messageSend {
+  position: relative;
+  cursor: pointer;
+  width: 240px;
+}
+.messageSend > input {
+  width: calc(240px - 50px);
+}
+.messageSend .ico_msgSend{
+  position: absolute;
+  top: 0;
+  right: 0;
+  display:inline-block;
+  width:50px;
+  height:34px;
+  background-color: #7b8b97;
+  border-radius: 0 3px 3px 0;
+  text-indent:-9999px;
+}
+.messageSend .ico_msgSend::after {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: url('../img/common/ico_msg.png') no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+.messageSend .ico_msgSend:hover {
+  background-color: #687680;
+}
+.priceInput {
+  text-align: right;
+}
+.flex-wrap .count-wrap {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.count-wrap > span {
+  display: inline-block;
+  font-size: 14px;
+  color: #101010;
+  font-weight: 500;
+  letter-spacing: -0.28px;
+  margin-right: 20px;
+}
+.count-wrap .select {
+  width: 80px;
+}
+.count-wrap .priceInput {
+  width: 140px;
+}
+.priceInput.ty_02 {
+  color: #ec4455;
+  font-weight: 500;
+}
+.priceInput.ty_03 {
+  font-weight: 500;
+}
+
+.popup .data-table-ty04.ty_admin .select {
+  width: 100%;
+}
+
+.tbl_admin_btn {
+  margin: 30px 0 40px;
+}
+
+.info-box-wrap .info-cont-box .cancelInput {
+  color: #ec4455;
+}
+
+/* datepicker 추가 */
+.date-input-wrap {
+  display: flex;
+  align-items:center;
+}
+.date_txt_gruop{
+  width:100%;
+  display:flex;
+  align-items:center;
+}
+.date-input-wrap .date_txt_gruop .date_tilde{
+  flex-shrink:0;
+}
+.date-input-wrap .datePicker {
+  width: 100%;
+}
+.date-input-wrap .date_tilde {
+  display: inline-block;
+  font-size: 14px;
+  color: #444;
+  letter-spacing: -0.28px;
+  margin:0 10px 0 6px;
+}
+.date-input-wrap .time_wrap{
+  display:flex;
+  align-items:center;
+  margin:0 30px 0 10px;
+}
+.date-input-wrap .time_wrap > span{
+  position:relative;
+  display:inline-block;
+  font-size:14px;
+  color:#101010;
+  letter-spacing:-.28px;
+  font-weight:500;
+  margin-right:10px;
+  padding-left:22px;
+  flex-shrink:0;
+}
+.date-input-wrap .time_wrap > span::before{
+  content:'';
+  display:inline-block;
+  width:16px;
+  height:16px;
+  background:url('../img/common/ico_time.png') no-repeat;
+  background-size:cover;
+  margin-right:6px;
+  position:absolute;
+  top:50%;
+  left:0;
+  transform:translateY(-50%);
+}
+.date-input-wrap .time_wrap > input{
+  width:80px;
+}
+.date-input-wrap .datePicker + .datePicker {
+  margin-left: 6px;
+}
+
+/* 예약현황 */
+.tblScroll .data-table-ty01.ty_02 thead{
+  height:91px;
+}
+.tblScroll .data-table-ty01.ty_02 tfoot{
+  bottom:0;
+}
+.data-table-ty01.ty_02 thead tr:first-child th:nth-child(n+3){
+  border-bottom:1px solid #eaeaea;
+}
+.data-table-ty01.ty_02 thead tr:first-child th{
+  border-right:1px solid #ccc;
+}
+.data-table-ty01.ty_02 thead tr:not(:first-child) th:nth-child(even){
+  border-left:1px solid #eaeaea;
+}
+.data-table-ty01.ty_02 thead tr:not(:first-child) th:not(:last-child):nth-child(even){
+  border-right:1px solid #ccc;  
+}
+
+.data-table-ty01.ty_02 tbody tr td:not(:last-child):nth-child(even){
+  border-right:1px solid #ccc;
+}
+.data-table-ty01.ty_02 tbody tr td:nth-child(n+3):nth-child(even) {
+  border-left:1px solid #eaeaea;
+}
+
+.data-table-ty01.ty_02 tfoot{
+  border-top:1px solid #ccc;
+}
+.data-table-ty01.ty_02 tfoot tr td{
+  border-top:1px solid #ccc;
+  border-bottom:none;
+  color:#101010;
+}
+.data-table-ty01.ty_02 tfoot tr td:not(:last-child):nth-child(even){
+  border-right:1px solid #ccc;
+}
+.data-table-ty01.ty_02 tfoot tr td:nth-child(n+3):nth-child(even){
+  border-left:1px solid #eaeaea;
+}
+
+.data-table-ty01.ty_02 thead tr:not(:first-child) th:nth-child(even),
+.data-table-ty01.ty_02 tbody tr td:nth-child(n+4):nth-child(even){
+  background-color:#fefbee;
+}
+.data-table-ty01.ty_02 tbody tr td:first-child,
+.data-table-ty01.ty_02 tfoot tr td:first-child{
+  border-right:1px solid #ccc
+}
+.data-table-ty01.ty_02 thead tr th:last-child,
+.data-table-ty01.ty_02 tbody tr td:last-child{
+  border-right:none;
+}
+
+/* 매출분석 */
+.reservation03 .data-table-ty01 tfoot tr td{
+  color:#101010;
+}
+
+/* 예약목록 */
+.searchBox .date-input-wrap {
+  display: flex;
+}
+.searchBox .date-input-wrap .datePicker {
+  width: 150px;
+}
+.searchBox .date-input-wrap .datePicker + .btn-wrap{
+  margin-left:6px;
+}
+.reservation04 .searchInput {
+  width: 399px;
+}
+
+/* 예약차트 */
+.reservation05 .searchBox .flex-wrap .date-input-wrap{
+  margin-right:20px;
+}
+
+/* 환경설정 - 회사정보 */
+.corpstup01 input{
+  width:240px;
+}
+.address-wrap{}
+.address-wrap .addr-search{
+  display:flex;
+  align-items:center;
+}
+.address-wrap .addr-search .ico_addr{
+  content:'';
+  display:inline-block;
+  width:16px;
+  height:16px;
+  background:url('../img/common//ico_close.png') no-repeat;
+  background-size:cover;
+  margin-right:10px;
+}
+.address-wrap .addr-search .btn-wrap{
+  margin-left:10px;
+}
+.address-wrap .addr-detail{
+  display:flex;
+  align-items:center;
+}
+.address-wrap .addr-detail > input + input{
+  margin-left:10px;
+}
+
+.address-wrap .addr-search + .addr-detail{
+  padding-top:12px;
+}
+
+/* 환경설정 - 운영환경설정 */
+.apply_wrap{
+  display:flex;
+  align-items:center;
+}
+.apply_wrap > li > input{
+  width:100px;
+}
+.apply_wrap > li > span{
+  font-size:14px;
+  color:#777;
+  letter-spacing:-.26px;
+}
+.apply_wrap > li > input + span{
+  margin-left:10px;
+}
+.apply_wrap > li + li{
+  margin-left:20px;
+}
+
+.dsgnation_wrap > li{  
+  display:flex;
+  align-items:center;
+}
+.dsgnation_wrap > li > .dsgnation_box{
+  display:flex;
+  align-items:center;
+}
+.dsgnation_wrap > li > .dsgnation_box > input + .btn-wrap{
+  margin-left:10px;
+}
+.dsgnation_wrap > li > .dsgnation_box + .frm-wrap{
+  margin-left:20px;
+}
+.dsgnation_wrap > li + li{
+  margin-top:15px;
+}
+
+/* 환경설정 - 사용자관리 */
+.corpstup03 .searchBox .searchInput{
+  width:240px;
+  margin-left:10px;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////
+반응형
+/////////////////////////////////////////////////////////////////////// */
+
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 767px) {
+  .mo_hide {
+    display: none !important;
+  }
+
+  .subBody > h2 {
+    font-size: 18px;
+    padding-bottom: 16px;
+  }
+
+  .searchBox {
+    display: block;
+    padding: 16px;
+  }
+  .searchBox .select,
+  .basicdata01 .searchBox .select {
+    width: calc(50% - 3px);
+  }
+  .searchBox .flex-wrap {
+    flex-wrap: wrap;
+    width:100%;
+  }
+  .searchBox .frm-wrap {
+    margin:12px 0 0 0;
+  }
+
+  .searchBox .btn-search-wrap {
+    display: block;
+    margin-top: 16px;
+  }
+  
+  .data-wrap .tbl-bot-wrap {
+    display: block;
+    margin-top: 20px;
+  }
+  .data-wrap .tbl-bot-wrap .paging {
+    position: unset;
+    transform: translate(0, 0);
+    width: 100%;
+  }
+  .data-wrap .tbl-bot-wrap .btn-wrap {
+    justify-content: flex-end;
+    margin-top: 24px;
+  }
+
+  .select{
+    width:100%;
+  }
+
+  .btn-wrap{
+    flex-shrink:0;
+  }
+  
+  .rsvDetail01 input,
+  .corpstup01 input{
+    width:100%;
+  }
+
+  /* 4 기초자료 - 1 차량관리 */  
+  .basicdata01 .flex-wrap .input-wrap{
+    width:calc(50% - 3px);  
+    margin-top:12px;
+  }  
+  .basicdata01 .searchBox .frm-wrap {
+    margin-top:12px;
+    margin:12px 0 0 16px;
+  }
+  .basicdata01 .flex-wrap .select + .input-wrap{
+    margin-left:0;
+  }
+
+  /* 4 기초자료 - 1 차량관리 - 상세 */  
+  .info-box-wrap .table-list-wrap .flex-wrap {
+    width: 100%;
+  }
+  .info-box-wrap.basic_ty02 .info-tit-area .frm-wrap.chk_del {
+    margin-left: 0;
+  }
+  .info-box-wrap.basic_ty02 .table-list-wrap .flex-wrap {
+    align-items: flex-start;
+  }
+
+  .info-tit-box {
+    display: block;
+    margin-bottom: 16px;
+  }
+  .info-tit-box .infoTit {
+    font-size: 16px;
+    margin-top: 24px;
+  }
+
+  .data-table-ty03 tbody tr th {
+    display: flex;
+    background-color: #fff;
+    border-right: none;
+    border-bottom: none;
+    padding: 16px 16px 0;
+    margin-bottom: 8px;
+  }
+  .data-table-ty03 tbody tr td {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+  .data-table-ty03 tbody tr th + td {
+    padding: 0 16px 16px;
+  }
+  .data-table-ty03 tbody tr td:last-child > .select + div {
+    margin-left: 16px;
+  }
+  .info-cont-box .tbl_list_input {
+    display: block;
+    width: 80%;
+  }
+  .info-cont-box .tbl_list_input > input {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+  .info-cont-box .tbl_list_input > input + input {
+    margin-top: 12px;
+    margin-left:0;
+  }
+  .info-box-wrap.basic_ty02 .data-table-ty03 tbody tr td {
+    align-items: flex-start;
+  }
+  .info-box-wrap.basic_ty02 .data-table-ty03 tbody tr td .toggleBtn {
+    margin-top: 5px;
+  }
+  .info-box-wrap.basic_ty02 .data-table-ty03 tbody tr td .btn-wrap {
+    display: inline-block;
+    margin: 12px 0;
+    justify-content: flex-start;
+  }
+  .info-box-wrap.basic_ty02 .data-table-ty03 tbody tr td .tbl_desc {
+    display: block;
+    margin-left: 0;
+  }
+  .info-box-wrap.basic_ty02 .data-table-ty03 tbody tr td .tbl_desc.type02 {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .guide_desc {
+    margin-bottom: 24px;
+  }
+  .data-table-ty01 thead tr th {
+    padding:14px 10px;
+  }
+  .data-table-ty04 tbody tr th {
+    display: block;
+    background-color: transparent;
+    border-bottom: none;
+    border-right: none;
+    padding: 16px 0 8px;
+  }
+  .data-table-ty04 tbody tr td {
+    display: block;
+    padding: 0 0 20px;
+  }
+  .data-table-ty04 tbody + tbody tr:last-child th,
+  .data-table-ty04 tbody + tbody tr:last-child td {
+    border-bottom: none;
+  }
+  .data-table-ty04 tbody tr td.m_border_bot_none {
+    border-bottom: none;
+    padding-bottom: 12px;
+  }
+
+  .frm-wrap .frm:first-child:last-child{
+    flex-shrink:0;
+    margin-right:0;
+  }
+  .basicDetail01 .select{
+    width:50%;
+  }
+
+  .date-input-wrap .dateInput {
+    width: calc(55% - 3px);
+  }
+  .date-input-wrap .timeInput {
+    width: calc(45% - 3px);
+  }
+
+  /* 1 예약 - 1 예약접수 */
+  .reservation01 .flex-wrap .select + .date-input-wrap{
+    margin:0 26px 0 0;
+  }
+
+  /* 1 예약 - 1 예약접수 - 상세 */
+  .rsvDetail01 input + .frm-wrap.check{
+    flex-shrink:0;
+  }
+  .date-input-wrap{
+    flex-wrap:wrap;
+    width:100%;
+  }
+  .datePicker input{
+    width:100%;
+  }
+  .date-input-wrap .date_tilde{
+    display:none;
+  }  
+  .date-input-wrap .date_tilde + .datePicker{
+    margin-top:8px;
+  }
+  .messageSend{
+    width:100%;
+  }
+  .subBody .messageSend > input{
+    width:calc(100% - 50px);
+  }
+  .date-input-wrap .datePicker + .datePicker{
+    margin-left:0;
+    margin-top:8px;
+  }
+  .searchBox .date-input-wrap .datePicker{
+    width:100%;
+  }
+
+  .data-table-ty04.ty_admin th{
+    background-color:#fff;
+  }
+
+  /* 예약 - 예약현황 */
+  .reservation02 .searchBox .date-input-wrap .date_txt_gruop .datePicker{
+    width:100%;
+  }
+  .reservation02 .date-input-wrap .date_txt_gruop .date_tilde{
+    display:block;
+  }
+  .reservation02 .searchBox .date-input-wrap .time_wrap + .date_txt_gruop{
+    margin-top:12px;
+  }
+  .searchBox .btn-search-wrap .btn-wrap{
+    justify-content:center;
+  }
+  
+  .tbl_x_scr {
+    width: 250%;
+  }
+  .reservation04 .tbl_x_scr{
+    width:400%;
+  }
+  .tblScroll::-webkit-scrollbar {
+    width: 4px;
+  }
+  .tblScroll.verX::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .reservation03 .flex-wrap .select + .date-input-wrap{
+    margin:12px 0;
+  }
+  .reservation03 .searchBox .date-input-wrap .datePicker{
+    width:100%;
+  }
+  .flex-wrap .select + .date-input-wrap{
+    margin:0;
+  }
+
+  /* 예약 - 예약목록 */
+  .reservation04 .searchBox .date-input-wrap{
+    margin:12px 0;
+  }
+  .reservation04 .searchBox .date-input-wrap .date_txt_gruop{
+    flex-wrap:wrap;
+  }
+  .reservation04 .searchBox .date-input-wrap .datePicker{
+    width:100%;
+  }
+  .date-input-wrap .date_txt_gruop .date_tilde + .datePicker{
+    margin-top:8px;
+  }
+  .reservation04 .searchInput{
+    width:100%;
+  }
+  .reservation04 .flex-wrap .select + .input-wrap{
+    margin:8px 0 0 0;
+  }
+  .reservation04 .searchBox .frm-wrap.radio{
+    margin:0;
+  }
+  .popup .searchBox .searchArea table tbody tr th,
+  .popup .searchBox .searchArea table tbody tr td{
+    display:flex;
+  }
+
+  .popup .searchBox .btn-search-wrap{
+    right:16px;
+    bottom:16px;
+  }
+
+  /* 예약 - 예약차트 */
+  .date-input-wrap .date_tilde.block{
+    display:inline-block;
+    flex-shrink:0;
+  }
+
+  .reservation05 .searchBox .flex-wrap .date-input-wrap{
+    flex-wrap:nowrap;
+    margin-right:0px;
+    margin-bottom:12px;
+  }
+  
+  .searchBox .searchArea table tbody tr:first-child th + td{
+    padding-top:12px;
+  }
+
+  /* 환경설정 - 회사정보 */
+  .address-wrap .addr-search .ico_addr{
+    flex-shrink:0;
+  }
+  .address-wrap .addr-detail{
+    display:block;
+  }
+  .address-wrap .addr-detail > input + input{
+    margin-left:0;
+    margin-top:8px;
+  }
+
+  /* 환경설정 - 운영환경설정 */
+  .apply_wrap{
+    flex-wrap:wrap;
+  }
+  .apply_wrap > li + li{
+    margin-left:0;
+    margin-top:8px;
+  }
+
+  .corpstup02 .info-box-wrap .flex-wrap .frm-wrap{
+    margin-left:10px;
+    flex-shrink:0;
+  }
+
+  .dsgnation_wrap > li{
+    flex-wrap:wrap;
+  }
+  .dsgnation_wrap > li > .dsgnation_box{
+    width:100%;
+  }
+  .dsgnation_wrap > li > .dsgnation_box + .frm-wrap{
+    margin-left:0;
+    margin-top:8px;
+  }
+
+  .corpstup03 .searchBox .searchInput{
+    margin-left:0;
+    margin-top:8px;
+  }
+}

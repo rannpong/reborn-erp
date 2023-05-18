@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+/* 로그인,비밀번호 공통 */
+.login_wrap {
+  min-width: 1024px;
+  padding: 86px 0;
+}
+.login_wrap .tit_img > img {
+  display: block;
+  margin: 0 auto;
+}
+.loginBox {
+  width: 600px;
+  padding: 60px 100px;
+  background: #fff;
+  box-shadow: 0 5px 30px 0 rgba(67, 87, 103, 0.08);
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+.loginBox > input {
+  width: 100%;
+  height:50px;
+  border-radius:4px;
+  padding: 16px;
+}
+.loginBox > input + input {
+  margin-top: 10px;
+}
+.loginBox .btnLogin {
+  width: 100%;
+  height: 56px;
+  line-height:56px;
+  background-color: #1ea8e7;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: -0.36px;
+  text-align: center;
+  margin-top: 30px;
+  cursor:pointer;
+}
+.loginBox .btnLogin:hover {
+  background-color: #008bcb;
+}
+
+.btnDef{
+  width:100px;
+  height:50px;
+  background-color:#1ea8e7;
+  border-radius:6px;
+  font-size:16px;
+  color:#fff;
+  letter-spacing:-.32px;
+  font-weight:500;
+  padding:16px;
+  cursor:pointer;
+}
+.btnDef:hover{
+  background-color:#008bcb;
+}
+.btnDef:disabled{
+  background-color:#e0e5e8;
+}
+
+.small .btnDef{
+  width:80px;
+  height:36px;
+  font-size:14px;
+  padding:10px 14px;
+}
+
+/* 로그인 */
+.login > h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #1ea8e7;
+  letter-spacing: -1px;
+  text-align: center;
+}
+.loginBox > .forgotTxt {
+  display:block;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 32px;
+  letter-spacing: -0.32px;
+  color: #444;
+  margin-top: 20px;
+  position: relative;
+}
+.loginBox > .forgotTxt::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  background: url('../img/common/ico_pw.png') no-repeat;
+  background-size: 24px;
+}
+
+.frm-wrap .frm.idSave {
+  margin-top: 16px;
+}
+.frm-wrap .frm.idSave label {
+  font-size: 16px;
+  color: #444;
+  letter-spacing: -0.32px;
+  padding-left:32px;
+}
+.frm-wrap .frm.idSave label::before{
+  width:24px;
+  height:24px;
+}
+
+/* 패스워드 */
+.password > h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #101010;
+  letter-spacing: -0.8px;
+  text-align: center;
+}
+.password > p {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: -0.36px;
+  color: #444;
+  padding-top: 30px;
+  text-align:center;
+}
+
+/* 팝업 */
+.loginPopup{
+  border-radius:20px;
+}
+.loginPopup .pop_close{
+  top:30px;
+  right:30px;
+}
+.loginPopup .popup_inner .pop_head{
+  padding:80px 50px 0;
+}
+.loginPopup .popup_inner .pop_head > h2{
+  font-size:30px;
+  letter-spacing:-.6px;
+}
+.loginPopup .popup_inner .pop_head > p{
+  font-size:18px;
+  letter-spacing:-.36px;
+  padding-top:20px;
+  text-align:center;
+}
+.loginPopup .popup_inner .pop_cont{
+  padding:40px 96px 50px;
+}
+.loginPopup .pop_btn{
+  margin:40px 0 0;
+}
+
+.loginPopup.small{
+  border-radius:10px;
+}
+.loginPopup.small .pop_close{
+  top:20px;
+  right:20px;
+}
+.loginPopup.small .popup_inner .pop_cont{
+  padding:50px 60px 30px;
+}
+
+.pwchange_box {
+  border-bottom:1px solid #eaeaea;
+  padding:0 54px 30px;
+}
+.pwchange_box input{
+  height:50px;
+  border-radius:4px;
+  font-size:16px;
+  color:#999;
+  letter-spacing:-.32px;
+  padding:16px;
+}
+.pwchange_box .input-wrap + .input-wrap{
+  margin-top:30px;
+}
+
+.guide-msg{
+  margin-top:10px;
+}
+.guide-msg > li{
+  position:relative;
+  font-size:13px;
+  color:#777;
+  letter-spacing:-.26px;
+  line-height:1.4;
+  padding-left:20px;
+}
+.guide-msg > li::before{
+  content:'';
+  display:inline-block;
+  width:14px;
+  height:14px;
+  background:url('../img/common/ico_guide.png') no-repeat;
+  background-size:cover;
+  margin-right:6px;
+  position:absolute;
+  top:1px;
+  left:0;
+}
+.guide-msg > li.error{
+  color:#ec4455;
+}
+.guide-msg > li.error::before{
+  background:url('../img/common/ico_guide_err.png') no-repeat;
+  background-size:cover;
+}
+.guide-msg > li.complete::before{
+  background:url('../img/common/ico_guide_comp.png') no-repeat;
+  background-size:cover;
+}
+.guide-msg > li + li{
+  margin-top:5px;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////
+반응형
+/////////////////////////////////////////////////////////////////////// */
+
+@media all and (max-width: 1024px) {
+}
+@media all and (max-width: 767px) {
+  .login-header{
+    min-width:auto;
+    height:auto;
+    padding:0;
+  }
+  .login-header > .logo{
+    width:158px;
+    height:18px;
+    top:50px;
+    left:50%;
+    transform:translateX(-50%);
+  }
+
+  .login_wrap{
+    min-width:auto;
+    margin-top:86px;
+    padding:44px 0 0 0;
+  }
+  .login_wrap .tit_img > img{
+    width:120px;
+  }
+  .login > h1,
+  .password > h1{
+    font-size:22px;
+    margin-top:10px;
+  }
+  .password > p{
+    font-size:14px;
+    padding-top:20px;
+  }
+  .loginBox{
+    width:100%;
+    background-color:transparent;
+    box-shadow:none;
+    padding:0 50px;
+    margin-top:30px;
+  }
+
+  .loginPopup .pop_close{
+    top:20px;
+    right:20px;
+  }
+  .loginPopup .popup_inner .pop_head{
+    height:auto;
+    padding:20px 0 0px;
+  }
+  .loginPopup .popup_inner .pop_head > h2{    
+    font-size:20px;
+    letter-spacing:-.4px;
+  }
+  .loginPopup .popup_inner .pop_head > p{
+    font-size:14px;
+    padding-top:26px;
+  }
+  .loginPopup .popup_inner .pop_cont{
+    padding:50px 20px 0;
+  }  
+  .loginPopup .btnDef{
+    width:calc(50% - 4px);
+    height:50px;
+  }
+
+  .loginPopup.small .pop_close{
+    right:25px;
+  }
+  .loginPopup.small .popup_inner .pop_cont{
+    padding:60px 30px 30px
+  }
+  .loginPopup.small .btnDef{
+    height:42px;
+  }
+  
+  .pwchange_box{
+    padding:0 10px 30px;
+  }
+
+}

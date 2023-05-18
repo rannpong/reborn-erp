@@ -1,0 +1,730 @@
+@charset "UTF-8";
+
+/*Datepicker CSS*/
+.datePicker button {
+	cursor: pointer;
+}
+
+.datePicker .datepicker-group01,
+.datePicker .date-group-list {
+	position: relative;
+}
+
+.datePicker .datepicker-flex {
+	display: flex;
+}
+
+.datePicker .date-group-list {
+	width: 50%;
+}
+
+.datePicker .dp__input_icon {
+	top: 10px;
+	right: 12px;
+	left: unset;
+	height: 14px;
+	width: 14px;
+	transform: unset;
+}
+
+.datePicker .dp__menu {
+	border: 1px solid var(--dp-border-color);
+	border: 1px solid #435767 !important;
+	border-radius: 3px;
+	box-shadow: 0 3px 6px 0 rgba(67, 87, 103, 0.2);
+	font-family: 'Pretendard', 'NotoSansCJKkr';
+	font-size: 14px;
+	height: auto;
+	min-height: 287px;
+	min-width: 292px;
+	padding: 15px 20px 30px;
+}
+
+.datePicker .dp__month_year_wrap>div {
+	border-radius: 0;
+}
+
+.datePicker .dp__month_year_wrap .dp__month_year_select:hover {
+	background-color: transparent;
+}
+
+.datePicker .dp__month_year_select {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.datePicker .dp__month_year_select:first-child {
+	padding-right: 5px;
+	justify-content: flex-end;
+}
+
+.datePicker .dp__month_year_select:last-child {
+	padding-left: 5px;
+	justify-content: flex-start;
+}
+
+.datePicker .dp__inner_nav {
+	border-radius: 4px;
+}
+
+.datePicker .dp__inner_nav:hover {
+	background-color: #ecf7ff;
+}
+
+.datePicker .dp__inner_nav,
+.datePicker .dp__calendar_header_item,
+.datePicker .dp__cell_inner {
+	height: 36px;
+	width: 36px;
+}
+
+.datePicker .slot-icon-next:hover,
+.datePicker .slot-ico-prev:hover {
+	background-color: #e6ebf3;
+}
+
+.datePicker .slot-icon-next,
+.datePicker .slot-ico-prev {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	z-index: 1;
+	height: 14px;
+	width: 8px;
+	background-repeat: no-repeat;
+	background-size: 8px 14px;
+	background-position: center;
+}
+
+.datePicker .slot-icon-next {
+	background-image: url(../../assets/img/common/ico_next_arrow.png)
+}
+
+.datePicker .slot-ico-prev {
+	background-image: url(../../assets/img/common/ico_prev_arrow.png)
+}
+
+.datePicker .dp__arrow_top,
+.dp__calendar_header_separator,
+.dp__selection_preview,
+.datePicker .dp__cancel,
+.datePicker .dp__clear_icon,
+.datePicker .dp__overlay_action {
+	display: none;
+}
+
+.datePicker .dp__calendar_header_item,
+.datePicker .dp__cell_inner {
+	border-radius: 4px;
+	padding: 0;
+}
+
+.datePicker .dp__cell_inner {
+	border: 0;
+	color: #444;
+}
+
+.datePicker .dp__cell_offset {
+	color: #ddd;
+}
+
+.datePicker .dp__calendar_header_item {
+	color: #777;
+	font-weight: normal;
+}
+
+.datePicker .dp__calendar_header_item {
+	line-height: 36px;
+}
+
+.datePicker input {
+	height: 34px;
+	background-color: #fff;
+	border: 1px solid #bcc4ce;
+	border-radius: 3px;
+	font-family: 'Pretendard', 'NotoSansCJKkr';
+	font-size: 14px;
+	color: #444;
+	letter-spacing: -.28px;
+	overflow: hidden;
+	padding: 9px 30px 9px 12px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.datePicker input:focus,
+.datePicker input:hover {
+	border: 1px solid #435767;
+}
+
+.datePicker .dp__range_end,
+.datePicker .dp__range_start,
+.datePicker .dp__active_date,
+.datePicker .dp__today.dp__active_date,
+.datePicker .dp__overlay_cell_active {
+	background-color: #1ea8e7;
+	color: #fff;
+}
+
+.dp__calendar_header>div:last-child {
+	color: #ec4455;
+}
+
+.datePicker .dp__today {
+	color: #1ea8e7;
+}
+
+.datePicker .custom-time-picker-component {
+	border-top: 1px solid #eaeaea;
+	display: flex;
+	margin-top: 15px;
+	padding-top: 15px;
+}
+
+.datePicker .custom-time-picker-component .select {
+	position: relative;
+	height: 30px;
+	width: 70px;
+}
+
+.datePicker .custom-time-picker-component .select:first-child {
+	margin-right: 13px;
+}
+
+.datePicker .custom-time-picker-component .select:first-child::after {
+	content: ':';
+	display: inline-block;
+	position: absolute;
+	top: 4px;
+	right: -8px;
+	color: #101010;
+	font-size: 16px;
+}
+
+.datePicker .select .selected {
+	font-size: 13px;
+	line-height: 30px;
+}
+
+.datePicker .select .select-arrow {
+	top: 8px;
+}
+
+.datePicker .select .select-box {
+	max-height: 120px;
+}
+
+.datePicker .dp__action_row {
+	padding: 0;
+	position: absolute;
+	right: 20px;
+	bottom: 30px;
+	height: 30px;
+	width: 60px !important;
+}
+
+.dp__action_buttons {
+	width: 60px;
+}
+
+.datePicker .dp__select {
+	background-color: #435767;
+	display: block;
+	color: #fff;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 28px;
+	height: 30px;
+	width: 60px;
+	text-align: center;
+}
+
+.dp__button:hover {
+	background-color: transparent
+}
+
+/*CSS*/
+.space-txt01 {
+	color: #444;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 34px;
+	margin: 0 10px;
+	width: 25px;
+}
+
+.space-txt02 {
+	margin: 0 5px;
+	width: unset;
+}
+
+.searchBox .date-input-wrap.last {
+	margin-top: 0;
+}
+
+.reservation01 .searchBox .date-input-wrap.first,
+.reservation01 .searchBox .date-input-wrap.last {
+	margin-left: 0;
+}
+
+.reservation01 .searchBox .date-input-wrap.first .datePicker {
+	margin-right: 0;
+}
+
+.color-palette-wrap {
+	display: table-cell;
+	vertical-align: bottom;
+}
+
+.color-wrap {
+	display: flex;
+	align-items: center;
+	height: 34px;
+	min-width: 190px;
+	margin-right: 30px;
+}
+
+.color-palette-wrap p {
+	color: #444;
+	font-size: 13px;
+	line-height: 16px;
+	margin-right: 16px;
+	padding-left: 22px;
+	position: relative;
+}
+
+.color-palette-wrap p:last-child {
+	margin-right: 0;
+}
+
+.color-palette-wrap p::before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	height: 16px;
+	width: 16px;
+}
+
+.color-pastel-green::before {
+	background-color: #00d8ba;
+}
+
+.color-pastel-red::before {
+	background-color: #ff5869;
+}
+
+.color-pastel-blue::before {
+	background-color: #9bafff;
+}
+
+/*Chart CSS*/
+.chart-box {
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+/*청구서 CSS*/
+.dcrt01 .searchBox .flex-wrap>.select,
+.invoice01 .searchBox .flex-wrap>.select {
+	width: 140px;
+}
+
+.invoice01 .searchBox .date-input-wrap>.select {
+	width: 100px;
+}
+
+.invoice01 .searchBox .searchInput {
+	width: calc(100% - 106px);
+}
+
+.invoice01 .searchBox .date-input-wrap {
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
+}
+
+.invoice01 .searchBox .date-input-wrap:last-child {
+	margin-right: 0;
+}
+
+.invoice01 .searchBox .datePicker {
+	width: 130px;
+}
+
+.invoice01 .select.select-height80 .select-box {
+	max-height: 80px;
+}
+
+.invoice01 .searchBox .frm-wrap .frm {
+	margin-right: 20px;
+}
+
+.invoice01 .searchBox .frm-wrap .frm:last-child {
+	margin-right: 0;
+}
+
+.invoice01 .tbl-tit-wrap {
+	justify-content: flex-end;
+}
+
+.invoice01 .tblScroll table {
+	min-width: 1260px;
+}
+
+.invoice01 .data-table-wrap .frm-wrap,
+.dcrt01 .data-table-wrap .frm-wrap {
+	justify-content: center;
+}
+
+.invoice01 .data-table-wrap .frm-wrap .frm,
+.dcrt01 .data-table-wrap .frm-wrap .frm {
+	margin-right: 0;
+}
+
+.invoice01 .data-table-wrap .frm-wrap .frm label,
+.dcrt01 .data-table-wrap .frm-wrap .frm label {
+	vertical-align: middle;
+}
+
+a.btn_bg01 {
+	color: #fff;
+}
+
+/*영업관리 CSS*/
+/* 추가 */
+.dcrt00 .flex-wrap .date-input-wrap+.frm-wrap {
+	margin-left: 0;
+}
+
+.dcrt01 .searchBox .datePicker {
+	width: 185px;
+}
+
+.dcrt01 .lendedit-txt .lendedit-date {
+	color: #1ea8e7;
+}
+
+.dcrt01 .data-wrap {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.dcrt01 .data-table-ty03 .datePicker {
+	width: 130px;
+}
+
+.dcrt01 .data-table-ty03 .frm-wrap .frm {
+	margin-right: 20px;
+}
+
+.dcrt01 .data-table-ty03 .frm-wrap .frm:last-child {
+	margin-right: 0;
+}
+
+.dcrt01 .rate-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	width: 130px;
+}
+
+.dcrt01 .list-tit {
+	margin-right: 12px;
+}
+
+.dcrt01 .list-unit {
+	margin-left: 4px;
+}
+
+.dcrt01 .rate-list input {
+	width: 60px;
+}
+
+.dcrt01 .data-table-ty01 input {
+	text-align: center;
+}
+
+.dcrt01 .info-box-wrap .data-table-ty01 input {
+	width: 100px;
+}
+
+.dcrt01 .info-box-wrap .data-table-ty01 th {
+	white-space: nowrap;
+}
+
+.dcrt01 .info-box-wrap .data-table-ty01 td:last-child input {
+	width: 50px;
+}
+
+.dcrt01 .lendedit-txt {}
+
+.data-table-ty03 tbody tr:last-child th {
+	border-bottom: none;
+}
+
+.pc_hide {
+	display: none;
+}
+
+.reponsive-table-wrap .pc_hide td::before {
+	display: none;
+}
+
+/*자동계산 btn*/
+.row-btn .btn {
+	font-size: 13px;
+	padding: 5px;
+}
+
+/* 추가 */
+.dcrt00 .flex-wrap .date-input-wrap {
+	flex-wrap: nowrap;
+}
+
+/**/
+.input-wrapper {
+	flex-wrap: wrap;
+}
+
+/*input + 삭제버튼*/
+.input-wrapper .selectAcc {
+	width: calc(50% - 5px);
+}
+
+.selectAcc {
+	display: flex;
+	margin-top: 5px;
+}
+
+.selectAcc:nth-child(1),
+.selectAcc:nth-child(2) {
+	margin-top: 0;
+}
+
+.selectAcc .btn-del {
+	background-color: #7b8b97;
+	border-radius: 0 3px 3px 0;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	width: 50px;
+	height: 34px;
+}
+
+.selectAcc:nth-child(odd) {
+	margin-right: 5px;
+}
+
+.selectAcc:nth-child(even) {
+	margin-left: 5px;
+}
+
+/*label명 없이 체크박스만 있는 table*/
+.subTy01 .frm-wrap {
+	justify-content: center;
+}
+
+.subTy01 .frm-wrap .frm {
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.subTy01 .frm-wrap .frm label {
+	height: 20px;
+	padding-left: 20px;
+}
+
+.pop_mid {
+	margin: 25px 0 15px;
+	text-align: left;
+}
+
+/*미디어 쿼리*/
+@media screen and (max-width:767px) {
+	.color-wrap {
+		margin-right: 0px;
+	}
+
+	.invoice01 .searchBox .date-input-wrap:last-child {
+		margin-top: 12px;
+	}
+
+	.dcrt00 .flex-wrap .date-input-wrap {
+		width: 100%;
+	}
+
+	/*반응형 table*/
+	.reponsive-table-wrap {
+		border-radius: 0;
+		border: none;
+	}
+
+	.reponsive-table-wrap thead {
+		border: none;
+		clip: rect(0, 0, 0, 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+
+	.reponsive-table-wrap tr {
+		border-top: 1px solid #7b8b97;
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	.reponsive-table-wrap tr:last-child {
+		margin-bottom: 0;
+	}
+
+	.reponsive-table-wrap tbody tr td {
+		border-bottom: 1px solid #eaeaea;
+		display: block;
+		font-size: 14px;
+		height: 44px;
+		line-height: 44px;
+		padding: 0;
+		position: relative;
+		text-align: left;
+		text-indent: 20px;
+	}
+
+	.reponsive-table-wrap tbody tr:last-child td {
+		border-bottom: 1px solid #eaeaea;
+	}
+
+	.reponsive-table-wrap td::before {
+		background-color: #fafbfd;
+		color: #101010;
+		content: attr(data-label);
+		font-weight: bold;
+		height: 43px;
+		line-height: 43px;
+		float: left;
+		width: 110px;
+	}
+
+	.reponsive-table-wrap .data-table-ty02 {
+		border-bottom: 0;
+	}
+
+	.reponsive-table-wrap .data-table-ty02 tbody tr td {
+		border-top: 0;
+	}
+
+	.reponsive-table-wrap .data-table-ty02 tbody tr td+td {
+		border-left: 0;
+	}
+
+	.reponsive-table-wrap .data-table-ty02 td:last-child::before {
+		border-bottom: 1px solid #eaeaea;
+	}
+
+	.reponsive-table-wrap .data-table-ty02 tbody tr td,
+	.reponsive-table-wrap .data-table-ty02 tbody tr td::before {
+		text-align: center;
+		text-indent: 0;
+	}
+
+	/*버튼 들어가는 부분*/
+	.reponsive-table-wrap .reponsive-td-btn,
+	.reponsive-table-wrap td.reponsive-td-btn::before {
+		line-height: 54px;
+		height: 54px;
+	}
+
+	.reponsive-table-wrap .reponsive-td-btn .btn-wrap {
+		height: 100%;
+	}
+
+	/*비고사항 부분*/
+	.reponsive-table-wrap .reponsive-table-ty01 tbody tr td:last-child::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		text-indent: 20px;
+	}
+
+	.reponsive-table-wrap .reponsive-table-ty01 tbody tr td:last-child {
+		line-height: 1.7;
+		height: auto;
+		padding: 10px 20px 12px 130px;
+		text-indent: 0;
+	}
+
+	/* contactBook table */
+	.tbl_contactBook col {
+		width: 100% !important;
+	}
+
+	.tbl_contactBook tbody tr th {
+		display: inline-block;
+	}
+
+	.tbl_contactBook tbody tr td {
+		display: block;
+	}
+
+	.tbl_contactBook tbody tr th {
+		padding-top: 12px;
+	}
+
+	.tbl_contactBook tbody tr td.td_box {
+		display: inline-block;
+		width: calc(100% - 68px);
+	}
+
+	.tbl_contactBook tbody tr td.td_box .select {
+		width: 100%;
+	}
+
+	.dcrt02 .searchBox .searchArea .date-input-wrap {
+		flex-wrap: nowrap;
+	}
+}
+
+@media screen and (max-width:585px) {
+	.dcrt01 .info-box-wrap .data-table-ty03 .flex-wrap {
+		flex-wrap: wrap
+	}
+
+	.dcrt01 .rate-list {
+		width: 50%;
+	}
+
+	.dcrt01 .rate-list:nth-child(1),
+	.dcrt01 .rate-list:nth-child(2) {
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width:575px) {
+	.reservation01 .searchBox .date-input-wrap.last {
+		width: 100%;
+	}
+
+	.reservation01 .searchBox .date-input-wrap.last .select {
+		width: 50%;
+	}
+
+	.color-palette-wrap {
+		display: block;
+		margin-top: 16px;
+	}
+
+	.color-wrap {
+		margin-right: 0px;
+		min-width: 100%;
+	}
+}

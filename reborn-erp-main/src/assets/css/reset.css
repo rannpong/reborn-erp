@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+/* ===== reset ===== */
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html, iframe, legend, li, ol, p, pre, textarea, ul {margin:0;padding:0}
+h1, h2, h3, h4, h5, h6 {font-size:100%;font-weight:400}
+ul {list-style:none}
+html {box-sizing:border-box}
+*, :after, :before {box-sizing:border-box}
+img, video {height:100%;max-width:100%;object-fit:cover;}
+iframe {border:0}
+table{width:100%;border-collapse:collapse;border-spacing:0;}
+td, th {padding:0;}
+hr,legend{display:none}
+caption{overflow:hidden;position:static;top:0;left:0;width:0;height:0;font-size:0;line-height:0;text-transform:uppercase}
+strong, b{font-weight:bold}
+a, a:visited{color:inherit;text-decoration: none;}
+button{background:transparent;padding:0;margin:0;border:0;outline:0;}
+input,select{vertical-align:middle;appearance:none;-webkit-appearance:none;border-radius:0;-webkit-border-radius:0;margin:0}
+
+/* ===== common ===== */
+*{
+  font-family: 'Pretendard', 'NotoSansCJKkr';
+}
+html, body{
+  overscroll-behavior-y: contain;
+}  
+body{  
+  font-family: 'Pretendard', 'NotoSansCJKkr';
+  background-color: #f8fafc;
+  font-size:16px;
+  color:#000;
+}
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  background: #f8fafc;
+}
+.wrap {
+  width: 100%;
+  min-width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+  display: inline-block;
+}
+.container {
+  min-height: calc(100vh - 60px);
+  height: 100%;
+  z-index: 1;
+  padding: 30px;
+  margin-left: 84px;
+  margin-top: 60px;
+}
+
+.hidden {
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+.hide {display: none;}
+
+.clearfix:before,
+.clearfix:after {
+  clear: both;
+}
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+input{
+  width:100%;
+  height:34px;
+  background-color:#fff;
+  border:1px solid #bcc4ce;
+  border-radius:3px;
+  font-size:14px;
+  color:#444;
+  letter-spacing:-.28px;
+  padding:9px 12px;
+  box-sizing:border-box;
+}
+
+input.error{
+  border:1px solid #ec4455;
+}
+
+input.closed{
+  background-color:#fefbee;
+  border:1px solid #bcc4ce;
+  color:#ec4455;
+}
+input.delete{
+  color:#ec4455;
+}
+input.delete:read-only{
+  background-color:#f8fafc;
+  border:1px solid #bcc4ce;
+  color:#e4969e;
+}
+
+textarea{
+  display:block;
+  width:100%;
+  height:100px;
+  background-color:#fff;
+  border:1px solid #bcc4ce;
+  border-radius:3px;
+  font-size:14px;
+  color:#444;
+  letter-spacing:-.28px;
+  padding:12px;
+  box-sizing:border-box;
+  resize:none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999;
+}
+
+input:focus, 
+textarea:focus {
+  border:1px solid #435767;
+}
+
+input:read-only,
+textarea:read-only {
+  background-color: #f8fafc;
+  border:1px solid #bcc4ce;
+  color:#777;
+}
+
+input:disabled{
+  background-color:#f8fafc;
+  border:1px solid #e0e5e8;
+  color:#bbb;
+}
+
+textarea:disabled{
+  background-color: #f8fafc;
+  border:1px solid #bcc4ce;
+  color:#777;
+}
